@@ -245,7 +245,7 @@ document.getElementById('loginUrl').href = loginUrl;
                 dataType: 'json'
             }).done(function(data) {
                 data.slice(0, 10).map(function(item) {
-                    var marker = L.marker([item.location.lat, item.location.lng]).addTo(map);
+                    var marker = L.marker([item.location.latitude, item.location.longitude]).addTo(map);
                     marker.bindPopup('<b>' + item.name + '</b><br>' + item.type);
                 });
             }).fail(function (jqXHR, textStatus, errorThrown) {
