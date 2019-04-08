@@ -244,6 +244,7 @@ document.getElementById('loginUrl').href = loginUrl;
                 // Keycloak Ajax End
                 dataType: 'json'
             }).done(function(data) {
+		console.log(data)
                 data.slice(0, 10).map(function(item) {
                     var marker = L.marker([item.location.latitude, item.location.longitude]).addTo(map);
                     marker.bindPopup('<b>' + item.name);
