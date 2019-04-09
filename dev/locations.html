@@ -245,11 +245,11 @@ document.getElementById('loginUrl').href = loginUrl;
                 dataType: 'json'
             }).done(function(data) {
 		console.log(data)
-		var item;
-		for (item in data){
-			console.log(item.location.latitude + ',' + item.location.longitude);
-			var marker = L.marker([item.location.latitude, item.location.longitude]).addTo(map);
-			marker.bindPopup('<b>' + item.name);
+		var i;
+		for (i=0; i<data.length; i++){
+			console.log(item[i].location.latitude + ',' + item[i].location.longitude);
+			var marker = L.marker([item[i].location.latitude, item[i].location.longitude]).addTo(map);
+			marker.bindPopup('<b>' + item[i].name);
 		}
                 //data.slice(0, 3).map(function(item) {
                 //    var marker = L.marker([item.location.latitude, item.location.longitude]).addTo(map);
