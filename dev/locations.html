@@ -244,7 +244,7 @@ document.getElementById('loginUrl').href = loginUrl;
                 // Keycloak Ajax End
                 dataType: 'json'
             }).done(function(data) {
-		console.log(data)
+		console.log(data);
 		var i;
 		for (i=0; i<data.length; i++){
 			console.log(item[i].location.latitude + ',' + item[i].location.longitude);
